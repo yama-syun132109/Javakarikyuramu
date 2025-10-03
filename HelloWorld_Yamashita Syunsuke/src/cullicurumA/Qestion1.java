@@ -117,6 +117,34 @@ public class Qestion1 {
   	    String y =String.valueOf(num);
   	    System.out.println("得点: " + y + "点");
 
-
+  	 // Q11	次の条件を満たすプログラムを条件演算子を使用して作成してください。						
+  	//int 型の変数 a に 10 を代入						
+  	//int 型の変数 b に 20 を代入						
+  	//a が b より小さいかどうかを boolean 変数 result に代入						
+  //	result の値を表示							
+  	    int a = 10, b = 20;
+  	    boolean result = (a > b) ? true : false;
+  	    System.out.println(result);
+  							
+  							
+  //Q12	条件演算子（三項演算子）を使用してください。						
+  	//int 型の変数 x に 15 を代入						
+  	//x が 10 以上なら "OK"、そうでなければ "NG" を表示						
+  		int x = 15;
+  		String max = (x >= 10) ? "OK" : "NG";
+  		System.out.println(max);
+  							
+  //Q13	String text = "私はJavaが好きです。Javaは楽しい！";という						
+  	//文章の中にある 「Java」 を 「Python」 に置き換えて表示させてください。						
+  		String text = "私はJavaが好きです。Javaは楽しい！";
+  		String newtext = text.replace("Java", "Python");
+  		System.out.println(newtext);
+  		
+  		
+  		
+  		
+  		
+  		
+  		
     }
 }
