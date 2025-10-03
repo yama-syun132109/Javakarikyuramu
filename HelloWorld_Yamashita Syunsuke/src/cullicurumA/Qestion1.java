@@ -39,7 +39,8 @@ public class Qestion1 {
             // 変数letterに"a"を代入		
           letter = 'a';	
             // 変数lettersに"ハロー"を代入		
-          letters = "ハロー";	
+          String yamashita = "ハロー";	
+          System.out.println(yamashita);
             // 変数isBooleanにtrueを代入
           isBoolean = true;
 
