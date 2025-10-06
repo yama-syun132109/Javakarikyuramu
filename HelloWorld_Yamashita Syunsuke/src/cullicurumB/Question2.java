@@ -100,86 +100,92 @@ public class Question2 {
         } else {
             System.out.println("不可");
 
-    }
+        }
 
-    //																									
-    //																									
-    //	Q8	入力が null または空文字（""）のときに「入力が無効です」と表示する処理を作成してください
-    String input = "";
-    if(input==null||input.equals(""))
-    {
+        //																									
+        //																									
+        //	Q8	入力が null または空文字（""）のときに「入力が無効です」と表示する処理を作成してください
+        String input = "";
+        if (input == null || input.equals("")) {
 
-        System.out.println("入力が無効です");
+            System.out.println("入力が無効です");
+        }
+        //																									
+        //																									
+        //	Q9	int 型の変数 day を用意（1～7 の数値を代入）							条件分岐の中でも複数の値ごとに異なる処理を実行する場合 に使えるのが switch文 です																
+        //		day の値に応じて曜日を表示							if 文を使っても条件分岐はできますが、選択肢が多いとコードが長くなり、可読性が悪くなる ことがあります。																
+        //		1 → "月曜日"							そこで、「特定の値ごとに異なる処理をする」 場合には switch 文を使うと便利です！																
+        //		2 → "火曜日"							「特定の値に応じた処理」を効率よく実装できるようにしていきましょう																
+        //		3 → "水曜日"																							
+        //		4 → "木曜日"																							
+        //		5 → "金曜日"																							
+        //		6 → "土曜日"																							
+        //		7 → "日曜日"																							
+        //		それ以外の値なら "無効な入力です" と表示																							
+        //		※Switch文を使用してください																							
+        //					int day = 3; // 曜日を表す（1=月曜日, 2=火曜日, …, 7=日曜日）
+        int day = 3;
+        switch (day) {
+        case 1:
+            System.out.println("月曜日");
+            break;
+        case 2:
+            System.out.println("火曜日");
+            break;
+        case 3:
+            System.out.println("水曜日");
+            break;
+        case 4:
+            System.out.println("木曜日");
+            break;
+        case 5:
+            System.out.println("金曜日");
+            break;
+        case 6:
+            System.out.println("土曜日");
+            break;
+        case 7:
+            System.out.println("日曜日");
+            break;
+        default:
+            System.out.println("無効な数値です");
+
+        }
+
+        //																									
+        //	Q10	int 型の変数 month を用意（1～12 の数値を代入）																							
+        //		month の値に応じて季節を表示																							
+        //		12, 1, 2 → "冬"																							
+        //		3, 4, 5 → "春"																							
+        //		6, 7, 8 → "夏"																							
+        //		9, 10, 11 → "秋"																							
+        //		それ以外の値なら "無効な月です" と表示																							
+        //		※Switch文を使用してください	
+        int month = 11;
+        switch (month) {
+        case 12:
+        case 1:
+        case 2:
+            System.out.println("冬");
+            break;
+        case 3:
+        case 4:
+        case 5:
+            System.out.println("春");
+            break;
+        case 6:
+        case 7:
+        case 8:
+            System.out.println("夏");
+            break;
+        case 9:
+        case 10:
+        case 11:
+            System.out.println("秋");
+            break;
+        default:
+            System.out.println("無効な月です");
+        }
+
     }
-    //																									
-    //																									
-    //	Q9	int 型の変数 day を用意（1～7 の数値を代入）							条件分岐の中でも複数の値ごとに異なる処理を実行する場合 に使えるのが switch文 です																
-    //		day の値に応じて曜日を表示							if 文を使っても条件分岐はできますが、選択肢が多いとコードが長くなり、可読性が悪くなる ことがあります。																
-    //		1 → "月曜日"							そこで、「特定の値ごとに異なる処理をする」 場合には switch 文を使うと便利です！																
-    //		2 → "火曜日"							「特定の値に応じた処理」を効率よく実装できるようにしていきましょう																
-    //		3 → "水曜日"																							
-    //		4 → "木曜日"																							
-    //		5 → "金曜日"																							
-    //		6 → "土曜日"																							
-    //		7 → "日曜日"																							
-    //		それ以外の値なら "無効な入力です" と表示																							
-    //		※Switch文を使用してください																							
-    //					int day = 3; // 曜日を表す（1=月曜日, 2=火曜日, …, 7=日曜日）
-      int day = 3;
-      switch (day) {
-      case 1:
-    	  System.out.println("月曜日");
-    	  break;
-      case 2:
-    	  System.out.println("火曜日");
-    	  break;
-      case 3:
-    	  System.out.println("水曜日");
-    	  break;
-      case 4:
-    	  System.out.println("木曜日");
-    	  break;
-      case 5:
-    	  System.out.println("金曜日");
-    	  break;
-      case 6:
-    	  System.out.println("土曜日");
-    	  break;
-      case 7:
-    	  System.out.println("日曜日");
-    	  break;
-    	  default:
-    		  System.out.println("無効な数値です");
-    		  
-      }
-    
-        
-    //																									
-    //	Q10	int 型の変数 month を用意（1～12 の数値を代入）																							
-    //		month の値に応じて季節を表示																							
-    //		12, 1, 2 → "冬"																							
-    //		3, 4, 5 → "春"																							
-    //		6, 7, 8 → "夏"																							
-    //		9, 10, 11 → "秋"																							
-    //		それ以外の値なら "無効な月です" と表示																							
-    //		※Switch文を使用してください	
-      int month = 11;
-      switch (month) {
-      case 12: case 1: case 2:
-    	  System.out.println("冬");
-    	  break;
-      case 3: case 4: case 5:
-    	  System.out.println("春");
-    	  break;
-      case 6: case 7: case 8:
-    	  System.out.println("夏");
-    	  break;
-      case 9: case 10: case 11:
-    	  System.out.println("秋");
-    	  break;
-    	  default:
-    		  System.out.println("無効な月です");
-      }
-      
-}
 }
