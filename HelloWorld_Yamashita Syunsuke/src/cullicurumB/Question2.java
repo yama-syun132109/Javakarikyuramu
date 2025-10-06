@@ -125,7 +125,33 @@ public class Question2 {
     //		それ以外の値なら "無効な入力です" と表示																							
     //		※Switch文を使用してください																							
     //					int day = 3; // 曜日を表す（1=月曜日, 2=火曜日, …, 7=日曜日）
-      
+      int day = 3;
+      switch (day) {
+      case 1:
+    	  System.out.println("月曜日");
+    	  break;
+      case 2:
+    	  System.out.println("火曜日");
+    	  break;
+      case 3:
+    	  System.out.println("水曜日");
+    	  break;
+      case 4:
+    	  System.out.println("木曜日");
+    	  break;
+      case 5:
+    	  System.out.println("金曜日");
+    	  break;
+      case 6:
+    	  System.out.println("土曜日");
+    	  break;
+      case 7:
+    	  System.out.println("日曜日");
+    	  break;
+    	  default:
+    		  System.out.println("無効な数値です");
+    		  
+      }
     
         
     //																									
@@ -137,5 +163,23 @@ public class Question2 {
     //		9, 10, 11 → "秋"																							
     //		それ以外の値なら "無効な月です" と表示																							
     //		※Switch文を使用してください	
+      int month = 11;
+      switch (month) {
+      case 12: case 1: case 2:
+    	  System.out.println("冬");
+    	  break;
+      case 3: case 4: case 5:
+    	  System.out.println("春");
+    	  break;
+      case 6: case 7: case 8:
+    	  System.out.println("夏");
+    	  break;
+      case 9: case 10: case 11:
+    	  System.out.println("秋");
+    	  break;
+    	  default:
+    		  System.out.println("無効な月です");
+      }
+      
 }
 }
