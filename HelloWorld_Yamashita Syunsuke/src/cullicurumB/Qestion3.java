@@ -112,7 +112,7 @@ public class Qestion3 {
 		}
 		System.out.println("終了しました");
 		
-		 // Scannerを閉じる（リソースの解放）
+		
 		
 		//																										
 		//																										
