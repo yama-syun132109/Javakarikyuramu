@@ -103,121 +103,108 @@ public class Qestion3 {
 		//		※Scannerを使用																								
 		//		※While文を使用してください		
 		{
-		Scanner scanner = new Scanner(System.in); // Scannerの準備
-		int num = 1; // 初期値を0以外にする（最初のループを実行するため）
+			Scanner scanner = new Scanner(System.in); // Scannerの準備
+			int num = 1; // 初期値を0以外にする（最初のループを実行するため）
 
-		while (num != 0) {
-			System.out.print("数値を入力してください（0で終了）：");
-			num = scanner.nextInt(); // ユーザーから数値を受け取る
-		}
-		System.out.println("終了しました");
-		
-		
-		
-		//																										
-		//																										
-		//																										
-		//	Q11	for文を使用して下記の通りに出力してください	
-		
-		
-	        for (int o = 1; o <= 9; o++) {
-	            for (int j = 1; j <= 9; j++) {
-	                int result = o * j;
-	                String strI = String.format("%02d", o);
-	                String strJ = String.format("%02d", j);
-	                String strN = String.format("%02d", num);
-	                System.out.print(strI + "*" + strJ + "=" + strN + " || ");
-	            }
-	            System.out.println();
-	        }
-	        
-	
-	        
-	//																										
-	//																										
-	//																										
-	//																										
-	//																										
-	//																										
-	//																										
-	//																										
-	//																										
-	//																										
-	//																										
-	//																										
-	//																										
-	//																										
-	//																										
-	//																										
-	//																										
-	//	Q12																									
-	//		入力した商品の残り台数が出力されるシステムを下記の条件で作成してください																								
-	//		・拡張for文・Switch文・条件演算子を使用すること　※普通のif文は使用不可																								
-	//		・Switch文内でテレビとディスプレイは続けて書き、条件演算子で各項目を出力される値を変更してください																								
-	//		・テレビとディスプレイは同じ商品扱いとし、二つの合計値は常に11になるようにしてください。 																								
-	//		・例：テレビと受け取った場合、→「テレビの残り台数は〇台です」※〇はランダムで出た数字　ディスプレイは（11-〇）の値																								
-	//		・入力される値は右記の表のどれかが入力され、入力回数の縛りはありません									商品一覧															
-	//		・入力された値は「、」区切りで指定してください									パソコン															
-	//		・そのほかの値が入力された場合下記を出力されるようにしてください									冷蔵庫															
-	//			『受け取った値』は指定の商品ではありません								扇風機															
-	//		・残り台数は0〜11までのランダムな値が出力されるようにしてください									洗濯機															
-	//											加湿器															
-	//		入力例↓↓									テレビ															
-	//		パソコン、冷蔵庫、扇風機、洗濯機、加湿器、テレビ、ディスプレイ、その他商品									ディスプレイ															
-	//																										
-	//		出力例↓↓																								
-	//		パソコンの残り台数は8台です																								
-	//		冷蔵庫の残り台数は7台です																								
-	//		扇風機の残り台数は7台です																								
-	//		洗濯機の残り台数は10台です																								
-	//		加湿器の残り台数は3台です																								
-	//		テレビの残り台数は9台です																								
-	//		ディスプレイの残り台数は2台です																								
-	//		『 その他商品 』は指定の商品ではありません																								
-	//
-	
-	        Random random = new Random();
-	        scanner.nextLine(); // 改行残りの吸収（Q10の nextInt のあと）
-	        System.out.print("商品名を「、」区切りで入力してください：");
-	        String input = scanner.nextLine();  // 例：パソコン、テレビ、その他商品など
-	        String[] home_appliances = input.split("、");
+			while (num != 0) {
+				System.out.print("数値を入力してください（0で終了）：");
+				num = scanner.nextInt(); // ユーザーから数値を受け取る
+			}
+			System.out.println("終了しました");
 
-	        int tvStock = random.nextInt(12); // テレビ・ディスプレイ共通在庫
+			//																										
+			//																										
+			//																										
+			//	Q11	for文を使用して下記の通りに出力してください	
 
-	        for (String home_appliance : home_appliances) {
-	            int stock = random.nextInt(12); // 通常商品の在庫
+			for (int o = 1; o <= 9; o++) {
+				for (int j = 1; j <= 9; j++) {
+					int result = o * j;
+					String strI = String.format("%02d", o);
+					String strJ = String.format("%02d", j);
+					String strN = String.format("%02d", result);
+					System.out.print(strI + "*" + strJ + "=" + strN + " || ");
+				}
+				System.out.println();
+			}
 
-	            switch (home_appliance) {
-	                case "パソコン":
-	                case "冷蔵庫":
-	                case "扇風機":
-	                case "洗濯機":
-	                case "加湿器":
-	                    System.out.println(home_appliance + "の残り台数は" + stock + "台です");
-	                    break;
+			//																										
+			//																										
+			//																										
+			//																										
+			//																										
+			//																										
+			//																										
+			//																										
+			//																										
+			//																										
+			//																										
+			//																										
+			//																										
+			//																										
+			//																										
+			//																										
+			//																										
+			//	Q12																									
+			//		入力した商品の残り台数が出力されるシステムを下記の条件で作成してください																								
+			//		・拡張for文・Switch文・条件演算子を使用すること　※普通のif文は使用不可																								
+			//		・Switch文内でテレビとディスプレイは続けて書き、条件演算子で各項目を出力される値を変更してください																								
+			//		・テレビとディスプレイは同じ商品扱いとし、二つの合計値は常に11になるようにしてください。 																								
+			//		・例：テレビと受け取った場合、→「テレビの残り台数は〇台です」※〇はランダムで出た数字　ディスプレイは（11-〇）の値																								
+			//		・入力される値は右記の表のどれかが入力され、入力回数の縛りはありません									商品一覧															
+			//		・入力された値は「、」区切りで指定してください									パソコン															
+			//		・そのほかの値が入力された場合下記を出力されるようにしてください									冷蔵庫															
+			//			『受け取った値』は指定の商品ではありません								扇風機															
+			//		・残り台数は0〜11までのランダムな値が出力されるようにしてください									洗濯機															
+			//											加湿器															
+			//		入力例↓↓									テレビ															
+			//		パソコン、冷蔵庫、扇風機、洗濯機、加湿器、テレビ、ディスプレイ、その他商品									ディスプレイ															
+			//																										
+			//		出力例↓↓																								
+			//		パソコンの残り台数は8台です																								
+			//		冷蔵庫の残り台数は7台です																								
+			//		扇風機の残り台数は7台です																								
+			//		洗濯機の残り台数は10台です																								
+			//		加湿器の残り台数は3台です																								
+			//		テレビの残り台数は9台です																								
+			//		ディスプレイの残り台数は2台です																								
+			//		『 その他商品 』は指定の商品ではありません																								
+			//
 
-	                case "テレビ":
-	                case "ディスプレイ":
-	                    System.out.println(home_appliance + "の残り台数は" + 
-	                        (home_appliance.equals("ディスプレイ") ? (11 - tvStock) : tvStock) + 
-	                        "台です");
-	                    break;
+			Random random = new Random();
+			scanner.nextLine(); // 改行残りの吸収（Q10の nextInt のあと）
+			System.out.print("商品名を「、」区切りで入力してください：");
+			String input = scanner.nextLine(); // 例：パソコン、テレビ、その他商品など
+			String[] home_appliances = input.split("、");
 
-	                default:
-	                    System.out.println("『" + home_appliance + "』は指定の商品ではありません");
-	                    break;
-	            }
-	        }
+			int tvStock = random.nextInt(12); // テレビ・ディスプレイ共通在庫
 
-	        scanner.close();
+			for (String home_appliance : home_appliances) {
+				int stock = random.nextInt(12); // 通常商品の在庫
+
+				switch (home_appliance) {
+				case "パソコン":
+				case "冷蔵庫":
+				case "扇風機":
+				case "洗濯機":
+				case "加湿器":
+					System.out.println(home_appliance + "の残り台数は" + stock + "台です");
+					break;
+
+				case "テレビ":
+				case "ディスプレイ":
+					System.out.println(home_appliance + "の残り台数は" +
+							(home_appliance.equals("ディスプレイ") ? (11 - tvStock) : tvStock) +
+							"台です");
+					break;
+
+				default:
+					System.out.println("『" + home_appliance + "』は指定の商品ではありません");
+					break;
+				}
+			}
+
+			scanner.close();
 		}
 	}
 }
-	
-	       
-				
-				
-				
-	        
-	
-
