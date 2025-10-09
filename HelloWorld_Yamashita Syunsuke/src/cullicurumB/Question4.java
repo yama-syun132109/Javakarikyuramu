@@ -45,7 +45,7 @@ public class Question4 {
         int[] arr4 = {12, 7, 9, 21, 5, 18};
         int max = arr4[0];
         int min = arr4[0];
-        for (int i = 1; i < arr.length; i++) {
+        for (int i = 1; i < arr4.length; i++) {
             if (arr4[i] > max) max = arr4[i];
             if (arr4[i] < min) min = arr4[i];
         }
