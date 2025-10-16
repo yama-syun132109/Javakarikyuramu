@@ -88,18 +88,16 @@ public class Qestion3 {
         //																										
         //																										
         //	Q9	while 文を使って 1 から 100 までの合計 を表示
-        
+
         int i = 1;
         int total = 0;
         while (i <= 100) {
             total += i;
             i++;
-        }   
-            System.out.print(total);
-            System.out.println();
-           
-            
-        
+        }
+        System.out.print(total);
+        System.out.println();
+
         //																										
         //																										
         //	Q10	ユーザーから 数値を入力 してもらう																								
@@ -133,23 +131,7 @@ public class Qestion3 {
                 System.out.println();
             }
 
-            //																										
-            //																										
-            //																										
-            //																										
-            //																										
-            //																										
-            //																										
-            //																										
-            //																										
-            //																										
-            //																										
-            //																										
-            //																										
-            //																										
-            //																										
-            //																										
-            //																										
+           																								
             //	Q12																									
             //		入力した商品の残り台数が出力されるシステムを下記の条件で作成してください																								
             //		・拡張for文・Switch文・条件演算子を使用すること　※普通のif文は使用不可																								
