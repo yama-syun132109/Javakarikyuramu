@@ -1,4 +1,4 @@
-package curriculum30;
+package curriculumC;
 
 public class Main {
     public static void main(String[] args) {

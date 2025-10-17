@@ -1,4 +1,4 @@
-package curriculum30;
+package curriculumC;
 
 public class Person {
     // インスタンスフィールド
