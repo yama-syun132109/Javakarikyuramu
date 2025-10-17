@@ -1,4 +1,4 @@
-package Q7;
+package q7;
 
 import java.util.List;
 

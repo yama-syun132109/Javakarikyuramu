@@ -1,4 +1,4 @@
-package Q6;
+package q6;
 
 public class Employee implements Billable {
     protected String id;

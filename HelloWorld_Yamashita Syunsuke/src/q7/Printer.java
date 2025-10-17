@@ -1,4 +1,4 @@
-package Q7;
+package q7;
 
 public interface Printer {
     void printLine(String line);

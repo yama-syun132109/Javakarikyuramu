@@ -1,4 +1,4 @@
-package Q4;
+package q5;
 
 public abstract class Employee {
     protected String id;
@@ -9,5 +9,9 @@ public abstract class Employee {
         this.name = name;
     }
 
-    public abstract int calculateDailyWage(int hours);
+    public String getName() {
+        return name;
+    }
+
+    public abstract int calculateDailywage(int hours);
 }

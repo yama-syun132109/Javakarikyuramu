@@ -1,4 +1,4 @@
-package Q6;
+package q6;
 
 public interface Billable {
     int costForDay(int hours);

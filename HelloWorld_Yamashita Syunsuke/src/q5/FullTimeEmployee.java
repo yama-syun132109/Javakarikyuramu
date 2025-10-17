@@ -1,4 +1,4 @@
-package Q5;
+package q5;
 
 public class FullTimeEmployee extends Employee {
 

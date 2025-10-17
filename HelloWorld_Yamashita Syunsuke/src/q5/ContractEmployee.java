@@ -1,4 +1,4 @@
-package Q6;
+package q5;
 
 public class ContractEmployee extends Employee {
 
@@ -7,7 +7,7 @@ public class ContractEmployee extends Employee {
     }
 
     @Override
-    public int costForDay(int hours) {
-        return hours * 1000;
+    public int calculateDailywage(int hours) {
+        return hours * 1200;
     }
 }

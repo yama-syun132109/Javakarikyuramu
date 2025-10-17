@@ -1,10 +1,10 @@
-package Q7;
+package q7;
 
-public class ContractEmployee implements Payable {
+public class FullTimeEmployee implements Payable {
     private String name;
     private int hours;
 
-    public ContractEmployee(String name, int hours) {
+    public FullTimeEmployee(String name, int hours) {
         this.name = name;
         this.hours = hours;
     }
@@ -16,6 +16,6 @@ public class ContractEmployee implements Payable {
 
     @Override
     public int calculateSalary() {
-        return hours * 1200;
+        return hours * 2000;
     }
 }
