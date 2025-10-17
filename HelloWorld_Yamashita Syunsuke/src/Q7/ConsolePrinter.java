@@ -1,6 +1,6 @@
-package Employee;
+package Q7;
 
-public class ConsolePrinterQ7 implements PrinterQ7 {
+public class ConsolePrinter implements Printer {
 
     @Override
     public void printLine(String line) {

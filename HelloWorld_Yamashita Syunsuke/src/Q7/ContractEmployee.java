@@ -1,10 +1,10 @@
-package Employee;
+package Q7;
 
-public class ContractEmployeeQ7 implements PayableQ7 {
+public class ContractEmployee implements Payable {
     private String name;
     private int hours;
 
-    public ContractEmployeeQ7(String name, int hours) {
+    public ContractEmployee(String name, int hours) {
         this.name = name;
         this.hours = hours;
     }

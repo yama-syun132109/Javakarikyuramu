@@ -4,77 +4,65 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import Employee.BillableQ6;
-import Employee.ConsolePrinterQ7;
-import Employee.ContractEmployeeQ5;
-import Employee.ContractEmployeeQ6;
-import Employee.ContractEmployeeQ7;
-import Employee.EmployeeQ1;
-import Employee.EmployeeQ2;
-import Employee.EmployeeQ3;
-import Employee.EmployeeQ4;
-import Employee.EmployeeQ5;
-import Employee.EmployeeQ6;
-import Employee.FullTimeEmployeeQ4;
-import Employee.FullTimeEmployeeQ5;
-import Employee.FullTimeEmployeeQ6;
-import Employee.FullTimeEmployeeQ7;
-import Employee.PartTimeEmployeeQ4;
-import Employee.PayableQ7;
-import Employee.SalaryReporter;
-
 public class Main2 {
     public static void main(String[] args) {
-        // Q1
-        EmployeeQ1 emp1 = new EmployeeQ1();
+
+        // ----- Q1 -----
+        Q1.Employee emp1 = new Q1.Employee();
         emp1.name = "山田太郎";
         emp1.work();
 
-        // Q2
-        EmployeeQ2 emp2 = new EmployeeQ2();
+        // ----- Q2 -----
+        Q2.Employee emp2 = new Q2.Employee();
         emp2.employeeId = "E001";
         emp2.name = "佐藤太郎";
         emp2.showInfo();
 
-        // Q3
-        EmployeeQ3 emp3 = new EmployeeQ3();
+        // ----- Q3 -----
+        Q3.Employee emp3 = new Q3.Employee();
         emp3.setEmployeeId("E002");
         emp3.setName("田中花子");
         System.out.println("社員ID: " + emp3.getEmployeeId() + ", 名前: " + emp3.getName());
 
-        // Q4
-        EmployeeQ4 full = new FullTimeEmployeeQ4("F001", "正社員A");
-        EmployeeQ4 part = new PartTimeEmployeeQ4("P001", "パートB");
+        // ----- Q4 -----
+        Q4.Employee full = new Q4.FullTimeEmployee("F001", "正社員A");
+        Q4.Employee part = new Q4.PartTimeEmployee("P001", "パートB");
+
         System.out.println("正社員の給与: " + full.calculateDailyWage(9) + " 円");
         System.out.println("パート社員の給与: " + part.calculateDailyWage(9) + " 円");
 
-        // Q5
-        List<EmployeeQ5> employeesQ5 = new ArrayList<>();
-        employeesQ5.add(new FullTimeEmployeeQ5("F001", "佐々木"));
-        employeesQ5.add(new ContractEmployeeQ5("C001", "山本"));
-        employeesQ5.add(new FullTimeEmployeeQ5("F002", "田中"));
-        employeesQ5.add(new ContractEmployeeQ5("C002", "鈴木"));
+        // ----- Q5 -----
+        List<Q5.Employee> employees5 = new ArrayList<>();
+        employees5.add(new Q5.FullTimeEmployee("F001", "佐々木"));
+        employees5.add(new Q5.ContractEmployee("C001", "山本"));
+        employees5.add(new Q5.FullTimeEmployee("F002", "田中"));
+        employees5.add(new Q5.ContractEmployee("C002", "鈴木"));
 
-        for (EmployeeQ5 e : employeesQ5) {
-            System.out.println(e.getName() + "の日給: " + e.calculateDailywage(9) + " 円");
+        int hours5 = 9;
+        for (Q5.Employee e : employees5) {
+            int pay = e.calculateDailywage(hours5);
+            System.out.println(e.getName() + "の日給: " + pay + " 円");
         }
 
-        // Q6
-        List<EmployeeQ6> membersQ6 = new ArrayList<>();
-        membersQ6.add(new FullTimeEmployeeQ6("F001", "青木"));
-        membersQ6.add(new ContractEmployeeQ6("C001", "上田"));
-        membersQ6.add(new FullTimeEmployeeQ6("F002", "小林"));
+        // ----- Q6 -----
+        List<Q6.Employee> employees6 = new ArrayList<>();
+        employees6.add(new Q6.FullTimeEmployee("F001", "青木"));
+        employees6.add(new Q6.ContractEmployee("C001", "上田"));
+        employees6.add(new Q6.FullTimeEmployee("F002", "小林"));
 
-        for (BillableQ6 b : membersQ6) {
-            System.out.println(((EmployeeQ6) b).name + "の日給: " + b.costForDay(9) + " 円");
+        int hours6 = 9;
+        for (Q6.Employee e : employees6) {
+            Q6.Billable b = (Q6.Billable) e;
+            System.out.println(e.getName() + "の日給: " + b.costForDay(hours6) + " 円");
         }
 
-        // Q7
-        List<PayableQ7> peopleQ7 = Arrays.asList(
-                new FullTimeEmployeeQ7("高橋", 9),
-                new ContractEmployeeQ7("伊藤", 9)
+        // ----- Q7 -----
+        List<Q7.Payable> payables = Arrays.asList(
+            new Q7.FullTimeEmployee("高橋", 9),
+            new Q7.ContractEmployee("伊藤", 9)
         );
-        SalaryReporter reporter = new SalaryReporter(new ConsolePrinterQ7());
-        reporter.printReport(peopleQ7);
+
+        Q7.SalaryReporter reporter = new Q7.SalaryReporter(new Q7.ConsolePrinter());
+        reporter.printReport(payables);
     }
 }

@@ -1,10 +1,10 @@
-package Employee;
+package Q4;
 
-public abstract class EmployeeQ4 {
+public abstract class Employee {
     protected String id;
     protected String name;
 
-    public EmployeeQ4(String id, String name) {
+    public Employee(String id, String name) {
         this.id = id;
         this.name = name;
     }

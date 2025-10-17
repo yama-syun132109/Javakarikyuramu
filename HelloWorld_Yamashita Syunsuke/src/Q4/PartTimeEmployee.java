@@ -1,8 +1,8 @@
-package Employee;
+package Q4;
 
-public class PartTimeEmployeeQ4 extends EmployeeQ4 {
+public class PartTimeEmployee extends Employee {
 
-    public PartTimeEmployeeQ4(String id, String name) {
+    public PartTimeEmployee(String id, String name) {
         super(id, name);
     }
 

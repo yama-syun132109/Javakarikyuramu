@@ -1,6 +1,6 @@
-package Employee;
+package Q3;
 
-public class EmployeeQ3 {
+public class Employee {
     private String employeeId;
     private String name;
 

@@ -1,6 +1,6 @@
-package Employee;
+package Q7;
 
-public interface PayableQ7 {
+public interface Payable {
     String getName();
     int calculateSalary();
 }
