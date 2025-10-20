@@ -7,7 +7,7 @@ import java.util.List;
 public class Main2 {
     public static void main(String[] args) {
 
-        // ----- Q1 -----
+        // cxkzx---w1aw2w2e-- Q1 -----
         q1.Employee emp1 = new q1.Employee();
         emp1.name = "山田太郎";
         emp1.work();
